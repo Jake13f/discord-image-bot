@@ -28,7 +28,7 @@ client.on('message', msg => {
 
     google.search(term).then(images => {
         if (images.length === 0)
-            msg.reply(`wow you searched for something so far outta this world I couldn't even find it! :O`);
+            return msg.reply(`wow you searched for something so far outta this world I couldn't even find it! :O`);
         
         let image = images.random().url;
 
